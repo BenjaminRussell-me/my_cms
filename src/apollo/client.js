@@ -3,8 +3,7 @@ import {
   createHttpLink,
   InMemoryCache,
 } from "@apollo/client/core";
-
-const token = "fnAEUZoXjbAARHwdLylQAlTW8xBg57CnDwYpVWzm";
+const token = import.meta.env.VITE_SECRET;
 // HTTP connection to the API
 const httpLink = createHttpLink({
   // You should use an absolute URL here

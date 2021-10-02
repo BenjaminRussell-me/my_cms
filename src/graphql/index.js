@@ -7,6 +7,7 @@ const EXCHANGE_RATES = gql`
         title
       }
     }
+    
   }
 `;
 export { EXCHANGE_RATES };
