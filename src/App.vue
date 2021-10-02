@@ -1,13 +1,13 @@
 <script setup>
 import { createApp, provide, h } from "vue";
-import apolloClient from "./apollo/client.js";
+import apolloClient from "./apollo/client.ts";
 import { EXCHANGE_RATES } from "./graphql";
 
 const data = await apolloClient.query({
   query: EXCHANGE_RATES,
 });
 
-console.log(data);
+console.log(data.data);
 </script>
 
 <template>
