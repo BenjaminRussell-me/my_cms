@@ -6,13 +6,13 @@ export default {
   plugins: [vue()],
   optimizeDeps: {
     include: [
-      '@apollo/client/core',
-      '@apollo/client/cache'
+//      '@apollo/client/core',
+ //     '@apollo/client/cache'
     ]
   },
   rollupInputOptions: {
     external: [
-      'react'
+  //    'react'
     ]
   }
 }
