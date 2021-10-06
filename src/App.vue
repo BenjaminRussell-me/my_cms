@@ -1,5 +1,7 @@
 <template>
-  <Body />
+  <Suspense>
+    <Body />
+  </Suspense>
 </template>
 
 <script setup>
