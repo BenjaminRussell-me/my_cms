@@ -1,13 +1,15 @@
 import { gql } from "@apollo/client/core";
 
-const EXCHANGE_RATES = gql`
+const ALL_THOUGHTS = gql`
   query {
     allThoughts(_size: 2) {
       data {
+				_id
         title
       }
     }
     
   }
 `;
-export { EXCHANGE_RATES };
+
+export { ALL_THOUGHTS };
