@@ -8,8 +8,19 @@ const ALL_THOUGHTS = gql`
         title
       }
     }
-    
+
   }
 `;
 
-export { ALL_THOUGHTS };
+const GET_BY_ID = gql`
+	query {
+		ThoughtsById(_id: 123){
+			data {
+				title
+				content
+			}
+		}
+	}
+`;
+
+export { ALL_THOUGHTS, GET_BY_ID };
