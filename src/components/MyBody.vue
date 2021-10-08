@@ -9,12 +9,19 @@
   <h1>{{ item }}</h1>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, ref } from "vue";
 import apolloClient from "../apollo/client.ts";
 import { ALL_THOUGHTS, GET_BY_ID } from "../graphql";
 import Display from "./Display.vue";
 import { gql } from "@apollo/client/core";
+
+interface Props {
+  title?: string;
+}
+const props = withDefaults(defineProps<Props>(), {
+  title: "placeholder",
+});
 
 let selected = ref({});
 
