@@ -6,14 +6,15 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import MyBody from "./components/MyBody.vue";
 import MyNav from "./components/MyNav.vue";
 
-let view = "Thoughts";
+let view = ref("Thoughts");
 
 function setView(viewValue) {
   console.log(view);
-  view = viewValue;
+  view.value = viewValue;
 }
 </script>
 
